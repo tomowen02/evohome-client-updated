@@ -5,6 +5,9 @@
 
 ![GitHub Logo](/images/evopi.png)
 
+An Evohome browser based dashboard based on python. It can be run from any device capable of running Python scripts, but it was developed for a Raspberry Pi.
+
+
 **EvoPi Instructions:**
 
 From the terminal on the Raspeberry Pi run the following commands.
@@ -17,7 +20,9 @@ From the terminal on the Raspeberry Pi run the following commands.
 
 4. sudo python evopi.py
 
-Based on evohome-client
+
+Credits to https://github.com/watchforstock and the _evohome-client_
+
 
 Build status: [![CircleCI](https://circleci.com/gh/watchforstock/evohome-client.svg?style=svg)](https://circleci.com/gh/watchforstock/evohome-client)
 
