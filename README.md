@@ -3,6 +3,16 @@
 EvoPi using the evohome-client 
 ==============================
 
+Instructions:
+
+From the terminal on the Raspeberry Pi run the following commands.
+sudo mkdir EvoPi && cd EvoPi
+sudo git clone https://github.com/clinkadink/evohome-client.git
+cd evohome-client
+sudo python evopi.py
+
+
+
 Build status: [![CircleCI](https://circleci.com/gh/watchforstock/evohome-client.svg?style=svg)](https://circleci.com/gh/watchforstock/evohome-client)
 
 Python client to access the [Total Connect Comfort](https://international.mytotalconnectcomfort.com/Account/Login) RESTful API.
