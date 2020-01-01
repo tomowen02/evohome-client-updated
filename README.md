@@ -1,9 +1,8 @@
 
 
-#EvoPi
+# EvoPi
+## Based on the evohome-client 
 ==============================
-
-
 
 ![GitHub Logo](/images/evopi.png)
 
