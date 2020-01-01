@@ -16,15 +16,15 @@ Documentation (in progress) at http://evohome-client.readthedocs.org/en/latest/
 Provides Evohome support for Home Assistant (and other automation platforms), see http://home-assistant.io/components/evohome/
 
 
-Instructions:
+**Instructions:**
 
 From the terminal on the Raspeberry Pi run the following commands.
 
-sudo mkdir EvoPi && cd EvoPi
+1. sudo mkdir EvoPi && cd EvoPi
 
-sudo git clone https://github.com/clinkadink/evohome-client.git
+2. sudo git clone https://github.com/clinkadink/evohome-client.git
 
-cd evohome-client
+3. cd evohome-client
 
-sudo python evopi.py
+4. sudo python evopi.py
 
