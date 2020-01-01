@@ -21,9 +21,9 @@ From the terminal on the Raspeberry Pi run the following commands.
 4. sudo python evopi.py
 
 
-Credits to https://github.com/watchforstock and the _evohome-client_
+Credits to @watchforstock, over at https://github.com/watchforstock and the _evohome-client_
 
-
+--------------------------------------------------------------------------------------------------------------------------------------
 
 
 Build status: [![CircleCI](https://circleci.com/gh/watchforstock/evohome-client.svg?style=svg)](https://circleci.com/gh/watchforstock/evohome-client)
