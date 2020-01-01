@@ -662,11 +662,11 @@ def getDash():
             setp = dSetp
             btnUp = 'fa fa-arrow-circle-up'
             btnDn = 'fa fa-arrow-circle-down'
-            devMode = getMode(zones[devId]['heatSetpointStatus']['setpointMode'])
+            devMode = getMode(zones[devId]['setpointStatus']['setpointMode'])
             
             #Get next switchpoint (schedule)                
             lst = getNextSwitchPoint(devId,dTherm)
-            swPoint = '{0} > {1}'.format(lst['TimeOfDay'][:-3],lst['TargetTemperature']) 
+            swPoint = '{0} > {1}'.format(lst['TimeOfDay'][:-3],lst['heatSetpoint']) 
             
             #Heating led on
             if temp < setp:
