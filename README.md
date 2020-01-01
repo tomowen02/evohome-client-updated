@@ -16,6 +16,7 @@ An Evohome browser based dashboard based on python. It can be run from any devic
 7. Captures the Setpoint (target) temperature of each device
 8. Shows when the device will change and the temperature it will change to (e.g. 22:00 > 16C) 
 
+--------------------------------------------------------------------------------------------------------------------------------------
 
 **EvoPi Instructions:**
 
@@ -33,21 +34,11 @@ From the terminal on the Raspeberry Pi run the following commands.
 
 6. Open and navigate to http://localhost:9999 (or whichever IP you have configured)
 
-
+--------------------------------------------------------------------------------------------------------------------------------------
 
 Credits to @watchforstock, over at https://github.com/watchforstock and the _evohome-client_
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
 
-Build status: [![CircleCI](https://circleci.com/gh/watchforstock/evohome-client.svg?style=svg)](https://circleci.com/gh/watchforstock/evohome-client)
 
-Python client to access the [Total Connect Comfort](https://international.mytotalconnectcomfort.com/Account/Login) RESTful API.
-
-It provides support for **Evohome** and the **Round Thermostat**.  It supports only EU/EMEA-based systems, please use [somecomfort](https://github.com/kk7ds/somecomfort) for US-based systems.
-
-This client uses the [requests](https://pypi.org/project/requests/) library. If you prefer an async-friendly client, [evohome-async](https://github.com/zxdavb/evohome-async) has been ported to use [aiohttp](https://pypi.org/project/aiohttp/) instead.
-
-Documentation (in progress) at http://evohome-client.readthedocs.org/en/latest/
-
-Provides Evohome support for Home Assistant (and other automation platforms), see http://home-assistant.io/components/evohome/
