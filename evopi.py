@@ -666,7 +666,7 @@ def getDash():
             
             #Get next switchpoint (schedule)                
             lst = getNextSwitchPoint(devId,dTherm)
-            swPoint = '{0} > {1}'.format(lst['TimeOfDay'][:-3],lst['TargetTemperature'])
+            swPoint = '{0} > {1}'.format(lst['TimeOfDay'][:-3],lst['TargetTemperature']) 
             
             #Heating led on
             if temp < setp:
