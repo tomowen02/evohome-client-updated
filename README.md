@@ -1,8 +1,7 @@
 
 
 # EvoPi
-## Based on the evohome-client 
-==============================
+## Based on the _evohome-client 
 
 ![GitHub Logo](/images/evopi.png)
 
