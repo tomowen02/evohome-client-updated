@@ -42,7 +42,7 @@ From the terminal on the Raspberry Pi run the following commands.
 
 5. sudo python evopi.py
 
-6. Open and navigate to http://localhost:9999 (or whichever IP you have configured)
+6. Open and navigate to http://localhost:9999/evopi (or whichever IP you have configured)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
