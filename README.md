@@ -15,7 +15,7 @@ Documentation (in progress) at http://evohome-client.readthedocs.org/en/latest/
 
 Provides Evohome support for Home Assistant (and other automation platforms), see http://home-assistant.io/components/evohome/
 
-
+![GitHub Logo](/images/evopi.png)
 
 **EvoPi Instructions:**
 
