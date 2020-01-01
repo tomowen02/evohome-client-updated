@@ -7,7 +7,7 @@
 
 An Evohome browser based dashboard based on python. It can be run from any device capable of running Python scripts, but it was developed for a Raspberry Pi. The dash shows each of the user's devices, coloured according to their actual temperature vs their setpoint temperature. It is fully interactive, allowing the user to:
 
-Markup : 1. Set the temperature of all devices (zones and hot water)
+1. Set the temperature of all devices (zones and hot water)
 2. Set the mode for the Evohome Controller (Auto, Economy, Away, Day Off, Custom, Off)
 3. Backup and restore the user's schedule
 4. Identifies which device is hotter/cooler than expected (device colour)
