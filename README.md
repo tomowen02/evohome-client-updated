@@ -1,5 +1,7 @@
-evohome-client
-==============
+
+
+EvoPi using the evohome-client 
+==============================
 
 Build status: [![CircleCI](https://circleci.com/gh/watchforstock/evohome-client.svg?style=svg)](https://circleci.com/gh/watchforstock/evohome-client)
 
