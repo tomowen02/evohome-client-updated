@@ -16,7 +16,8 @@ Documentation (in progress) at http://evohome-client.readthedocs.org/en/latest/
 Provides Evohome support for Home Assistant (and other automation platforms), see http://home-assistant.io/components/evohome/
 
 
-**Instructions:**
+
+**EvoPi Instructions:**
 
 From the terminal on the Raspeberry Pi run the following commands.
 
