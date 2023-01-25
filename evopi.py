@@ -13,7 +13,7 @@
 import evoconfig
 from evohomeclient2 import EvohomeClient
 import time
-import BaseHTTPServer
+import http.server
 from datetime import datetime, timedelta
 import socket, errno
 
@@ -30,33 +30,33 @@ sf = None
 def startWebserver():
 
     #create a webserver to serve the data to
-    server_class = BaseHTTPServer.HTTPServer
+    server_class = http.server.HTTPServer
     httpd = server_class((evoconfig.url, evoconfig.port), MyHandler)
-    print time.asctime(), "Server Starts - %s:%s" % (evoconfig.url, evoconfig.port)
+    print(time.asctime(), "Server Starts - %s:%s" % (evoconfig.url, evoconfig.port))
 
     try:
         httpd.serve_forever()
-    except socket.error, e:
+    except socket.error as e:
         if isinstance(e.args, tuple):
-            print "errno is %d" % e[0]
+            print("errno is %d" % e[0])
             if e[0] == errno.EPIPE:
                # remote peer disconnected
-               print "Detected remote disconnect"
+               print("Detected remote disconnect")
             else:
                # determine and handle different error
                pass
         else:
-            print "socket error ", e
+            print("socket error ", e)
         httpd.server_close()
         startWebserver()
     except KeyboardInterrupt:
         pass
 
     httpd.server_close()
-    print time.asctime(), "Server Stops - %s:%s" % (evoconfig.url, evoconfig.port)
+    print(time.asctime(), "Server Stops - %s:%s" % (evoconfig.url, evoconfig.port))
 
 
-class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
+class MyHandler(http.server.BaseHTTPRequestHandler):
     
     def do_HEAD(s):
         
@@ -74,7 +74,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         s.send_header("Content-type", "text/html")
         s.end_headers()
         
-        #Connect to evohome       
+        #Connect to evohome
         
         #URL Parameter commands
         if s.path == '/evopi':
@@ -129,19 +129,20 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             evoConnect()
             
 #Connect to evohome                  
-def evoConnect():                
+def evoConnect(locationIndex=0):                
     
     global client
     global dCount
     fmt = "%d/%m/%Y %H:%M"
     
-    print 'Establishing connection to evohome ...'    
-    print '{0} - EvoPi is online @ {1}'.format((datetime.now()).strftime(fmt), EVOPI_URL)
+    print('Establishing connection to evohome ...')    
+    print('{0} - EvoPi is online @ {1}'.format((datetime.now()).strftime(fmt), EVOPI_URL))
 
     client = EvohomeClient (evoconfig.usr, evoconfig.pw, debug=True)
 
     #Get the number of devices    
     dCount = 0
+    client.locations = [client.locations[locationIndex]] #!TEMP TESTING
     for device in client.temperatures ():
         dCount += 1
         #print device
@@ -815,7 +816,7 @@ def getDash():
     #Loop complete
     
     table.append('</tr></table></body></html>')    
-    sf.wfile.write(''.join(table))
+    sf.wfile.write(''.join(table).encode())
 
     
 def getNextSwitchPoint(devId, devType):
