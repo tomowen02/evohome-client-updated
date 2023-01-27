@@ -3,6 +3,10 @@
 # EvoPi
 ## Based on the _evohome-client_
 
+#### What is different in this version of the evohome client?
+- Code has been updated to work with python 3.x
+- Outdated libraries have been swapped out. For example, we are now using the http library.
+
 ![GitHub Logo](/images/evopi.png)
 
 An Evohome browser based dashboard based on python. It can be run from any device capable of running Python scripts, but it was developed for a Raspberry Pi. The dash shows each of the user's devices, coloured according to their actual temperature vs their setpoint temperature. It is fully interactive, allowing the user to:
